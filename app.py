@@ -18,7 +18,7 @@ st.write(outputs)
 
 st.write( subprocess.check_output(["python", "-c" ,"import os; print(os.listdir())"]).decode() ) 
 st.write( subprocess.check_output("ls").decode() )
-subprocess.check_output(["python", "dep_write.py"])
+st.write( subprocess.check_output(["python", "dep_write.py"]).decode() ) 
 
 with open('file.txt') as f:
     lines = f.readlines()
