@@ -16,6 +16,7 @@ outputs = load_dependencies()
 st.write ( subprocess.check_output(["python", "-m", "pip", "list"]).decode() )
 st.write(outputs)
 
+st.write( subprocess.check_output("ls").decode() )
 subprocess.check_output("python dep_write.py")
 
 with open('file.txt') as f:
