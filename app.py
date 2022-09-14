@@ -6,14 +6,14 @@ st.write(output)
 
 @st.cache 
 def load_dependencies():
-    with st.spinner("Installing pandas"):
-        outputs = [
-            subprocess.check_output(["python", "-m", "pip", "install", "pandas"]).decode(),
-            subprocess.check_output(["python", "-m", "pip", "install", "matplotlib"]).decode(),
-        ]
-        return outputs 
+    outputs = [
+        subprocess.check_output(["python", "-m", "pip", "install", "pandas"]).decode(),
+        subprocess.check_output(["python", "-m", "pip", "install", "matplotlib"]).decode(),
+    ]
+    return outputs 
     
 outputs = load_dependencies()
+st.write ( subprocess.check_output(["python", "-m", "pip", "list"]).decode() )
 st.write(outputs)
 
 import pandas as pd 
