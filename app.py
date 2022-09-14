@@ -6,7 +6,7 @@ st.write(output)
     
 with st.spinner("Installing pandas"):
     output = subprocess.check_output(["python", "-m", "pip", "install", "pandas"]).decode()
-    # output = subprocess.check_output(["python", "-m", "pip", "install", "pandas"]).decode()
+    output = subprocess.check_output(["python", "-m", "pip", "install", "matplotlib"]).decode()
     st.write(output)
     
 import pandas as pd 
