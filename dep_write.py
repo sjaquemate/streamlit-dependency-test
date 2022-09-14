@@ -3,10 +3,10 @@ import traceback
 
 def main():
     try:
+        import matplotlib
         import matplotlib.pyplot as plt 
-        import streamlit as st 
         with open("file.txt", "w") as f:
-            f.write("hello world!")
+            f.write(f"hello world! {matplotlib.__version__}")
 
     except Exception:
         print(traceback.format_exc())
