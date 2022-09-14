@@ -4,6 +4,8 @@ import sys
 st.write(sys.version, sys.version_info)
 output = subprocess.check_output(["python", "--version"]).decode()
 st.write(output)
+
+
 @st.cache 
 def load_dependencies():
     outputs = [
